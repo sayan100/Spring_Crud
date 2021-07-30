@@ -13,7 +13,7 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @GeneratedValue(generator = "gen")
-    @GenericGenerator(name = "gen",strategy = "foreign",parameters = @Parameter(name = "property",value = "employee"))
+    @GenericGenerator(name = "gen",strategy = "foreign",parameters = @Parameter(name = "property",value = "sm_employee"))
     private int empId;
     private String address;
     private String country;
