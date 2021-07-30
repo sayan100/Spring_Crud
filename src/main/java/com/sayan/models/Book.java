@@ -11,6 +11,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String bookName;
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "sm_author_book",
             joinColumns = {@JoinColumn(name = "book_id")},
             inverseJoinColumns = {@JoinColumn(name = "author_id")})
